@@ -11,6 +11,9 @@
 #import "AnimationViewController.h"
 #import "WaterfallViewController.h"
 
+#import "Person.h"
+#import "NSObject+KVO.h"
+
 @interface HomeTableViewController ()
 @property (nonatomic, strong) NSArray *datas;
 @end
@@ -20,7 +23,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.datas = @[@"1. 最基本的流水线布局 - Storyboard", @"2. 最基本的流水线布局 - 代码", @"3. 自定义插入、删除 cell 的动画", @"4. 线性布局和圆形布局", @"5. 瀑布流布局"];
+    
+    Person *p = [Person new];
+    
+    [p xf_addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew context:nil];
+    //[p addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionNew context:nil];
+    p.age = 10;
+
 }
+
+- (void)willChangeValueForKey:(NSString *)key {
+    NSLog(@"%s, %@", __FUNCTION__, key);
+}
+
+- (void)didChangeValueForKey:(NSString *)key {
+    NSLog(@"%s, %@", __FUNCTION__, key);
+}
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    NSLog(@"%s, %@", __FUNCTION__, keyPath);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

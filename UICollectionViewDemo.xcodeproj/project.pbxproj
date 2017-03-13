@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F5AA72B1E76771F00251F40 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5AA72A1E76771F00251F40 /* NSObject+KVO.m */; };
+		8F5AA72E1E76787D00251F40 /* XFKVONotifying_Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5AA72D1E76787D00251F40 /* XFKVONotifying_Person.m */; };
+		8F5AA7311E7678BC00251F40 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5AA7301E7678BC00251F40 /* Person.m */; };
 		8FA738BA1E6EA59A00BA2648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA738B91E6EA59A00BA2648 /* main.m */; };
 		8FA738BD1E6EA59A00BA2648 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA738BC1E6EA59A00BA2648 /* AppDelegate.m */; };
 		8FA738C31E6EA59A00BA2648 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FA738C11E6EA59A00BA2648 /* Main.storyboard */; };
@@ -24,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F5AA7291E76771E00251F40 /* NSObject+KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVO.h"; sourceTree = "<group>"; };
+		8F5AA72A1E76771F00251F40 /* NSObject+KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
+		8F5AA72C1E76787D00251F40 /* XFKVONotifying_Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFKVONotifying_Person.h; sourceTree = "<group>"; };
+		8F5AA72D1E76787D00251F40 /* XFKVONotifying_Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFKVONotifying_Person.m; sourceTree = "<group>"; };
+		8F5AA72F1E7678BC00251F40 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		8F5AA7301E7678BC00251F40 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		8FA738B51E6EA59A00BA2648 /* UICollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA738B91E6EA59A00BA2648 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8FA738BB1E6EA59A00BA2648 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +73,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F5AA7321E76820D00251F40 /* KVO实现原理 */ = {
+			isa = PBXGroup;
+			children = (
+				8F5AA7291E76771E00251F40 /* NSObject+KVO.h */,
+				8F5AA72A1E76771F00251F40 /* NSObject+KVO.m */,
+				8F5AA72C1E76787D00251F40 /* XFKVONotifying_Person.h */,
+				8F5AA72D1E76787D00251F40 /* XFKVONotifying_Person.m */,
+				8F5AA72F1E7678BC00251F40 /* Person.h */,
+				8F5AA7301E7678BC00251F40 /* Person.m */,
+			);
+			name = "KVO实现原理";
+			sourceTree = "<group>";
+		};
 		8FA738AC1E6EA59A00BA2648 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +110,7 @@
 				8FA738C11E6EA59A00BA2648 /* Main.storyboard */,
 				8FA738D51E6EC1EF00BA2648 /* HomeTableViewController.h */,
 				8FA738D61E6EC1EF00BA2648 /* HomeTableViewController.m */,
+				8F5AA7321E76820D00251F40 /* KVO实现原理 */,
 				8FF3B2831E70F75300A142F4 /* 最基本的流水布局-storyboard */,
 				8FF3B2841E70F77400A142F4 /* 最基本的流水布局-code */,
 				8FF3B28B1E70FC5800A142F4 /* 自定义动画 */,
@@ -226,12 +249,15 @@
 			files = (
 				8FA738BD1E6EA59A00BA2648 /* AppDelegate.m in Sources */,
 				8FF3B2981E715DB900A142F4 /* WaterfallLayout.m in Sources */,
+				8F5AA7311E7678BC00251F40 /* Person.m in Sources */,
 				8FF3B2871E70F7C000A142F4 /* BaseViewController.m in Sources */,
 				8FA738DD1E6ECCF600BA2648 /* CollectionViewCell.m in Sources */,
 				8FF3B28E1E70FC8D00A142F4 /* AnimationViewController.m in Sources */,
 				8FF3B28A1E70F9A500A142F4 /* DemoCollectionViewCell.m in Sources */,
 				8FA738D71E6EC1EF00BA2648 /* HomeTableViewController.m in Sources */,
 				8FA738BA1E6EA59A00BA2648 /* main.m in Sources */,
+				8F5AA72B1E76771F00251F40 /* NSObject+KVO.m in Sources */,
+				8F5AA72E1E76787D00251F40 /* XFKVONotifying_Person.m in Sources */,
 				8FF3B2951E715BB400A142F4 /* WaterfallViewController.m in Sources */,
 				8FA738DA1E6EC48600BA2648 /* BaseCollectionViewController.m in Sources */,
 				8FF3B2911E71092B00A142F4 /* DemoFlowLayout.m in Sources */,
