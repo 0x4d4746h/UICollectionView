@@ -33,8 +33,8 @@ static NSString *const reusedIndicator = @"demo_collection_view_cell";
     wl.delegate = self;
     
     self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:wl];
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
+    self.collectionView.delegate    = self;
+    self.collectionView.dataSource  = self;
     [self.view addSubview:self.collectionView];
     
     self.collectionView.alwaysBounceVertical = YES;

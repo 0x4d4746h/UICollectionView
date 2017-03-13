@@ -101,7 +101,7 @@
     
     attrs.frame = CGRectMake(x, y, w, h);
     
-    if (self.lastRowAttris.count == 4) {
+    if (self.lastRowAttris.count == self.columnCount) {
         [self.lastRowAttris replaceObjectAtIndex:min_height_index withObject:attrs];
     }else {
         [self.lastRowAttris insertObject:attrs atIndex:(indexPath.item % self.columnCount)];

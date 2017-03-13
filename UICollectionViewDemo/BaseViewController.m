@@ -26,15 +26,15 @@ static NSString *const reusedIndicator = @"demo_collection_view_cell";
     
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-    flowLayout.minimumLineSpacing = 5.f;
-    flowLayout.minimumInteritemSpacing = 10.f;
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    flowLayout.itemSize = CGSizeMake(100, 120);
-    flowLayout.sectionInset = UIEdgeInsetsMake(50, 15, 20, 15);
+    flowLayout.minimumLineSpacing       = 5.f;
+    flowLayout.minimumInteritemSpacing  = 10.f;
+    flowLayout.scrollDirection          = UICollectionViewScrollDirectionVertical;
+    flowLayout.itemSize                 = CGSizeMake(100, 120);
+    flowLayout.sectionInset             = UIEdgeInsetsMake(50, 15, 20, 15);
     
     self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:flowLayout];
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
+    self.collectionView.delegate    = self;
+    self.collectionView.dataSource  = self;
     self.collectionView.alwaysBounceVertical = YES;
     
     [self.view addSubview:self.collectionView];
